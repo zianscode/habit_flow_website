@@ -14,7 +14,6 @@ export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [typedText, setTypedText] = useState("");
   
-  // Refs for Parallax & Floating
   const p1Ref = useRef<HTMLDivElement>(null);
   const p2Ref = useRef<HTMLDivElement>(null);
   const p3Ref = useRef<HTMLDivElement>(null);
@@ -27,7 +26,6 @@ export default function Hero() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Typing Animation
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
@@ -57,7 +55,6 @@ export default function Hero() {
     };
     const typeTimeout = setTimeout(type, 1000);
 
-    // 2. Text Reveal
     if (titleRef.current) {
       const words = titleRef.current.innerText.split(" ");
       titleRef.current.innerHTML = words.map(word => `<span class="word-wrapper" style="display:inline-block; overflow:hidden;"><span class="word" style="display:inline-block;">${word}&nbsp;</span></span>`).join("");
@@ -67,7 +64,6 @@ export default function Hero() {
       });
     }
 
-    // 3. Intro Timeline
     const tl = gsap.timeline();
     tl.from(".hero-description, .cta-group", {
       y: 30, opacity: 0, stagger: 0.2, duration: 1, ease: "power3.out", delay: 0.5
@@ -75,7 +71,6 @@ export default function Hero() {
       y: 100, opacity: 0, duration: 1.5, ease: "expo.out",
     }, "-=0.8");
 
-    // 4. Floating Badges
     const floatingBadges = [b1Ref, b2Ref, b3Ref, b4Ref];
     floatingBadges.forEach((ref, i) => {
       if (ref.current) {
@@ -85,7 +80,6 @@ export default function Hero() {
       }
     });
 
-    // 5. Scroll & Tilt
     if (scrollWrapperRef.current && tiltWrapperRef.current) {
       gsap.to(scrollWrapperRef.current, {
         rotateX: 20, y: -100, scale: 1.05,
@@ -183,7 +177,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Floating Badges */}
           <div ref={p1Ref} className="hero-badge-container badge-1" style={{ position: "absolute", top: "15%", left: "-8%", zIndex: 10 }}>
             <div ref={b1Ref} style={{ background: "white", padding: "16px 24px", borderRadius: "24px", boxShadow: "0 20px 40px rgba(0,0,0,0.08)", display: "flex", alignItems: "center", gap: 14 }}>
               <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#10b98120", display: "flex", alignItems: "center", justifyContent: "center" }}>

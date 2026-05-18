@@ -20,7 +20,6 @@ export default function Integrations() {
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<HTMLDivElement>(null);
 
-  // Fungsi untuk menghapus ikon jika gagal dimuat (Conditional Rendering)
   const handleImageError = (name: string) => {
     setIntegrations(prev => prev.filter(item => item.name !== name));
   };
@@ -98,7 +97,7 @@ export default function Integrations() {
                     filter: "grayscale(100%) opacity(0.4)",
                     transition: "all 0.4s ease"
                   }} 
-                  onError={() => handleImageError(app.name)} // Menghapus elemen jika gambar gagal di-load
+                  onError={() => handleImageError(app.name)} 
                   unoptimized
                   onMouseEnter={(e) => (e.currentTarget.style.filter = "grayscale(0%) opacity(1)")}
                   onMouseLeave={(e) => (e.currentTarget.style.filter = "grayscale(100%) opacity(0.4)")}

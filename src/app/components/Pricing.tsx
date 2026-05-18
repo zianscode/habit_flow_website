@@ -19,7 +19,6 @@ export default function Pricing() {
 
     const cards = gridRef.current?.children;
     if (cards) {
-      // Speed Parallax - Each card moves at a different vertical speed
       Array.from(cards).forEach((card, i) => {
         const speed = (plans[i].speed - 1) * 100;
         gsap.to(card, {

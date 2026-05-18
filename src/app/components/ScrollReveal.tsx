@@ -28,7 +28,6 @@ export default function ScrollReveal({
     const content = contentRef.current;
     if (!container || !content) return;
 
-    // 1. Animasi Masuk (Hanya sekali pada contentRef)
     gsap.fromTo(
       content,
       {
@@ -54,16 +53,15 @@ export default function ScrollReveal({
       }
     );
 
-    // 2. Animasi Paralaks (Hanya pada containerRef, memisahkan tanggung jawab)
     if (parallax) {
       gsap.to(container, {
-        y: -40, // Sedikit lebih jauh untuk efek kedalaman
+        y: -40, 
         ease: "none",
         scrollTrigger: {
           trigger: container,
           start: "top bottom",
           end: "bottom top",
-          scrub: 1, // Memberikan sedikit 'smoothing' agar tidak bergetar
+          scrub: 1, 
         }
       });
     }

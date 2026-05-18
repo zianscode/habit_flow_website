@@ -53,7 +53,6 @@ export default function HowItWorks() {
       });
     }
 
-    // Parallax numbers in background - Smoother
     const bgNumbers = document.querySelectorAll(".bg-number");
     bgNumbers.forEach((num) => {
       gsap.to(num, {
@@ -105,7 +104,6 @@ export default function HowItWorks() {
         </div>
 
         <div style={{ position: "relative" }}>
-          {/* Connecting SVG Line */}
           <svg 
             style={{ 
               position: "absolute", 
@@ -152,7 +150,6 @@ export default function HowItWorks() {
                   textAlign: "center"
                 }}
               >
-                {/* Large Background Number Outline */}
                 <div 
                   className="bg-number"
                   style={{ 
@@ -172,7 +169,6 @@ export default function HowItWorks() {
                   {step.id}
                 </div>
 
-                {/* Badge Icon */}
                 <div style={{ 
                   width: "56px", 
                   height: "56px", 

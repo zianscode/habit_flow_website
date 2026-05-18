@@ -128,7 +128,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Links */}
         <div
           className="nav-desktop-links"
           style={{ display: "flex", gap: 4, alignItems: "center" }}
@@ -154,7 +153,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Action Button */}
         <div className="nav-action" style={{ flexShrink: 0 }}>
           <Magnetic>
             <a
@@ -177,7 +175,6 @@ export default function Navbar() {
           </Magnetic>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           style={{
@@ -235,7 +232,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <div
         style={{
           position: "absolute",

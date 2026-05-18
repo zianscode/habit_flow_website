@@ -21,7 +21,6 @@ export default function CustomCursor() {
     const follower = followerRef.current;
     if (!cursor || !follower) return;
 
-    // Sembunyikan elemen jika di mobile
     if (window.innerWidth <= 992) {
       cursor.style.display = "none";
       follower.style.display = "none";
@@ -95,7 +94,6 @@ export default function CustomCursor() {
     };
   }, [isMounted]);
 
-  // Penting: Jangan merender apa pun sampai komponen terpasang di browser
   if (!isMounted) return null;
 
   return (

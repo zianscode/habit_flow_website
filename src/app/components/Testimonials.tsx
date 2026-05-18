@@ -32,7 +32,7 @@ export default function Testimonials() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      // Reveal Cards with Parallax Offset
+
       gsap.from(".testimonial-card", {
         y: (i) => 100 + i * 50,
         opacity: 0,
@@ -44,7 +44,6 @@ export default function Testimonials() {
         }
       });
 
-      // Background decorative shape movement
       gsap.to(".testimonial-bg-shape", {
         rotate: 360,
         duration: 20,
@@ -96,7 +95,6 @@ export default function Testimonials() {
         position: "relative" 
       }}
     >
-      {/* Decorative Parallax Background */}
       <div className="testimonial-bg-shape" style={{ 
         position: "absolute", 
         top: "50%", 
@@ -138,7 +136,7 @@ export default function Testimonials() {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 transformStyle: "preserve-3d",
-                marginTop: i % 2 === 0 ? "0" : "60px" // Staggered layout
+                marginTop: i % 2 === 0 ? "0" : "60px" 
               }}
             >
               <div style={{ marginBottom: "40px" }}>

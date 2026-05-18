@@ -15,7 +15,6 @@ export default function Magnetic({ children }: { children: React.ReactNode }) {
       const x = clientX - (left + width / 2);
       const y = clientY - (top + height / 2);
       
-      // Batasi tarikan magnet (kekuatan 0.35)
       xTo(x * 0.35);
       yTo(y * 0.35);
     };

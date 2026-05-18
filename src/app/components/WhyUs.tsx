@@ -53,7 +53,6 @@ export default function WhyUs() {
           ref={gridRef}
           className="stats-grid"
         >
-          {/* KARTU 1 - 90% (BESAR: 2 KOLOM) */}
           <div
             className="stat-card"
             style={{ 
@@ -67,7 +66,6 @@ export default function WhyUs() {
             <div style={{ fontSize: "0.85rem", color: "#64748b", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em" }}>Consistency</div>
           </div>
 
-          {/* KARTU 2 - 3.5x (KECIL: 1 KOLOM) */}
           <div
             className="stat-card"
             style={{ 
@@ -81,7 +79,6 @@ export default function WhyUs() {
             <div style={{ fontSize: "0.85rem", color: "#94a3b8", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em" }}>Productivity Boost</div>
           </div>
 
-          {/* KARTU 3 - 10K+ (KECIL: 1 KOLOM) */}
           <div
             className="stat-card"
             style={{ 
@@ -95,7 +92,6 @@ export default function WhyUs() {
             <div style={{ fontSize: "0.85rem", color: "#64748b", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em" }}>Global Achievers</div>
           </div>
 
-          {/* KARTU 4 - 4.9* (BESAR: 2 KOLOM) */}
           <div
             className="stat-card"
             style={{ 

@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -18,7 +17,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       infinite: false,
     });
 
-    // Synchronize Lenis with GSAP ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
@@ -27,7 +25,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     gsap.ticker.lagSmoothing(0);
 
-    // Parallax logic for background orbs
     const orbs = document.querySelectorAll('.parallax-orb');
     const handleScroll = () => {
       const scrolled = window.scrollY;
@@ -41,7 +38,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     window.addEventListener("scroll", handleScroll);
 
-    // Global Cleanup
     return () => {
       lenis.destroy();
       gsap.ticker.remove((time) => {
@@ -53,7 +49,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
   return (
     <>
-      {/* Background Parallax Orbs - Unik & Aesthetic */}
       <div style={{ position: "fixed", inset: 0, zIndex: -1, pointerEvents: "none", overflow: "hidden" }}>
         <div 
           className="parallax-orb"

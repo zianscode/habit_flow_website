@@ -22,7 +22,7 @@ export default function TrustBar() {
       
       gsap.to(marquee, {
         x: -singleSetWidth,
-        duration: 25, // Diperlambat sedikit agar lebih elegan
+        duration: 25, 
         ease: "none",
         repeat: -1,
       });
@@ -50,7 +50,7 @@ export default function TrustBar() {
           ref={marqueeRef}
           style={{
             display: "flex",
-            gap: "clamp(40px, 8vw, 100px)", // Gap mengecil di mobile
+            gap: "clamp(40px, 8vw, 100px)", 
             width: "fit-content",
             alignItems: "center",
           }}
@@ -81,7 +81,7 @@ export default function TrustBar() {
                 width={120}
                 height={28}
                 style={{
-                  height: "clamp(20px, 4vw, 36px)", // Tinggi logo mengecil di mobile
+                  height: "clamp(20px, 4vw, 36px)", 
                   width: "auto",
                   objectFit: "contain",
                 }}

@@ -24,7 +24,6 @@ export default function LandingPage() {
         <TrustBar />
       </ScrollReveal>
 
-      {/* Adding parallax to major sections for depth */}
       <ScrollReveal parallax={true}>
         <Features />
       </ScrollReveal>

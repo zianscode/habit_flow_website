@@ -25,7 +25,6 @@ export default function FinalCTA() {
       }
     );
 
-    // Deep Parallax for blobs
     const blobs = blobsRef.current?.children;
     if (blobs) {
       gsap.to(blobs[0], {
@@ -85,7 +84,6 @@ export default function FinalCTA() {
           </div>
         </div>
 
-        {/* Parallax Blobs */}
         <div ref={blobsRef}>
           <div style={{ position: "absolute", width: "500px", height: "500px", background: "radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)", top: "-20%", left: "-10%", zIndex: 1 }} />
           <div style={{ position: "absolute", width: "400px", height: "400px", background: "radial-gradient(circle, rgba(236,72,153,0.1) 0%, transparent 70%)", bottom: "-10%", right: "-5%", zIndex: 1 }} />

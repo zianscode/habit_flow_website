@@ -46,11 +46,10 @@ export default function Preloader() {
 
   return (
     <div ref={containerRef} style={{ position: "fixed", inset: 0, zIndex: 9999, pointerEvents: "none" }}>
-      {/* Background Layers */}
+
       <div className="preloader-bg-layer" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "#0f172a", zIndex: 1 }} />
       <div className="preloader-bg-layer" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "#4f46e5", zIndex: 0 }} />
 
-      {/* Content */}
       <div 
         ref={contentRef}
         style={{ 

@@ -27,7 +27,6 @@ export default function Footer() {
             marginBottom: "100px",
           }}
         >
-          {/* Brand Column */}
           <div style={{ gridColumn: "span 1", minWidth: "260px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
               <div style={{ position: "relative", width: 32, height: 32 }}>
@@ -46,7 +45,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h4 style={{ fontWeight: 600, fontSize: "0.8rem", color: "#0f172a", marginBottom: 32, textTransform: "uppercase", letterSpacing: "0.05em" }}>
@@ -76,7 +74,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom Bar */}
         <div
           style={{
             paddingTop: "48px",

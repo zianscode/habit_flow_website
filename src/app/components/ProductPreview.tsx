@@ -25,9 +25,8 @@ export default function ProductPreview() {
       }
     );
 
-    // Deep Parallax for Mockup
     gsap.to(mockupRef.current, {
-      y: -100, // Increased movement
+      y: -100, 
       rotation: -2,
       ease: "none",
       scrollTrigger: {
@@ -80,7 +79,6 @@ export default function ProductPreview() {
         </div>
 
         <div ref={mockupRef} style={{ position: "relative" }}>
-          {/* Subtle Glow Parallax */}
           <div style={{ position: "absolute", width: "120%", height: "120%", background: "radial-gradient(circle, rgba(79,70,229,0.06) 0%, transparent 70%)", top: "-10%", left: "-10%", zIndex: 0 }} />
           
           <div style={{ position: "relative", zIndex: 1, borderRadius: "32px", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,0,0,0.12)", border: "1px solid rgba(0,0,0,0.05)", background: "white" }}>

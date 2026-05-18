@@ -168,10 +168,8 @@ export default function Features() {
           Mastery Through <span style={{ color: "#4f46e5" }}>Precision.</span>
         </h2>
 
-        {/* KODE DESKTOP DIKEMBALIKAN KE PENGATURAN MANUAL ANDA */}
         <div ref={gridRef} className="features-grid">
           
-          {/* KARTU 1 - MOMENTUM (Gunakan GridArea Manual Anda) */}
           <div 
             className="f-card f-card-1"
             style={{ ...cardStyle, gridArea: "span 1 / span 2" }} 
@@ -185,7 +183,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* KARTU 2 - TRACKING */}
           <div 
             className="f-card f-card-2"
             style={{ ...cardStyle, gridArea: "span 1 / span 1" }}
@@ -199,7 +196,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* KARTU 3 - ANALYTICS */}
           <div 
             className="f-card f-card-3"
             style={{ ...cardStyle, gridArea: "span 1 / span 1" }}
@@ -213,7 +209,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* KARTU 4 - OBJECTIVES */}
           <div 
             className="f-card f-card-4"
             style={{ ...cardStyle, gridArea: "span 1 / span 2" }}
@@ -227,7 +222,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* KARTU 5 - ALERTS */}
           <div 
             className="f-card f-card-5"
             style={{ ...cardStyle, gridArea: "span 1 / span 2" }}
@@ -241,7 +235,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* KARTU 6 - GLOBAL */}
           <div 
             className="f-card f-card-6"
             style={{ ...cardStyle, gridArea: "span 1 / span 1" }}
